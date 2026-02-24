@@ -1,0 +1,344 @@
+/* ============================================
+   Modal Styles for Principal's Desk
+   ============================================ */
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+}
+
+.modal-container {
+    background: #e8e8e8;
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1);
+}
+
+.modal-header {
+    background: #e8e8e8;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.modal-close:hover {
+    background: #ddd;
+    color: #333;
+}
+
+.modal-body {
+    padding: 30px 25px;
+    overflow-y: auto;
+    flex: 1;
+    background: #e8e8e8;
+}
+
+.modal-body p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    color: #333;
+    font-size: 1rem;
+}
+
+.modal-body p:last-child {
+    margin-bottom: 0;
+}
+
+.modal-footer {
+    padding: 15px 25px;
+    background: #e8e8e8;
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-close-modal {
+    background: white;
+    color: #333;
+    border: 1px solid #999;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-close-modal:hover {
+    background: #f5f5f5;
+    border-color: #666;
+}
+
+
+/* Scrollbar Styling for Modal Body */
+
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: #d0d0d0;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: #999;
+    border-radius: 4px;
+}
+
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+
+/* Responsive Design for Modal */
+
+@media (max-width: 768px) {
+    .modal-container {
+        width: 95%;
+        max-height: 90vh;
+    }
+    .modal-header {
+        padding: 15px 20px;
+    }
+    .modal-header h2 {
+        font-size: 1.3rem;
+    }
+    .modal-body {
+        padding: 20px;
+    }
+    .modal-body p {
+        font-size: 0.95rem;
+    }
+    .modal-footer {
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-container {
+        width: 98%;
+        max-height: 95vh;
+        border-radius: 0;
+    }
+    .modal-header {
+        padding: 12px 15px;
+    }
+    .modal-header h2 {
+        font-size: 1.1rem;
+    }
+    .modal-body {
+        padding: 15px;
+    }
+    .modal-body p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    .btn-close-modal {
+        padding: 8px 20px;
+        font-size: 0.95rem;
+    }
+}
+
+
+/* Animation for modal entrance */
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+
+/* ============================================
+   YouTube Video Modal Styles
+   ============================================ */
+
+.video-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10001;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-modal-overlay.active {
+    opacity: 1;
+}
+
+.video-modal-container {
+    background: #000;
+    border-radius: 8px;
+    max-width: 1200px;
+    width: 95%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.video-modal-overlay.active .video-modal-container {
+    transform: scale(1);
+}
+
+.video-modal-header {
+    background: #1a1a1a;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.video-modal-header h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.video-modal-header .modal-close {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: all 0.3s;
+    border-radius: 4px;
+}
+
+.video-modal-header .modal-close:hover {
+    background: #333;
+    color: #ff0000;
+}
+
+.video-modal-body {
+    padding: 0;
+    background: #000;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Responsive Design for Video Modal */
+
+@media (max-width: 768px) {
+    .video-modal-container {
+        width: 98%;
+        max-height: 95vh;
+    }
+    .video-modal-header {
+        padding: 12px 15px;
+    }
+    .video-modal-header h2 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .video-modal-container {
+        width: 100%;
+        height: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    .video-modal-header h2 {
+        font-size: 1rem;
+    }
+    .video-wrapper {
+        padding-bottom: 75%;
+        /* Adjusted for mobile */
+    }
+}

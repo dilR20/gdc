@@ -1,0 +1,251 @@
+/* ============================================
+   Department Page Styles
+   ============================================ */
+
+.page-header {
+    background: linear-gradient(135deg, #003366 0%, #0056b3 100%);
+    color: white;
+    padding: 60px 0 40px;
+    position: relative;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.page-header .breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+.page-header .breadcrumb-item {
+    color: rgba(255,255,255,0.8);
+}
+
+.page-header .breadcrumb-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.page-header .breadcrumb-item.active {
+    color: #ffc107;
+}
+
+/* Department Content */
+.department-content {
+    padding: 40px 15px;
+}
+
+/* Tabs */
+.dept-tabs {
+    border-bottom: 2px solid #003366;
+    margin-bottom: 0;
+}
+
+.dept-tabs .nav-link {
+    background: transparent;
+    border: none;
+    color: #333;
+    font-weight: 600;
+    padding: 12px 30px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.dept-tabs .nav-link:hover {
+    background: #f8f9fa;
+    color: #003366;
+}
+
+.dept-tabs .nav-link.active {
+    background: #003366;
+    color: white;
+    border-bottom-color: #003366;
+}
+
+/* Faculty Cards */
+.faculty-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.faculty-photo {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.faculty-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faculty-info {
+    padding: 20px 15px;
+}
+
+.faculty-info h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 8px;
+}
+
+.faculty-info .designation {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.faculty-info .qualification {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Courses Table */
+.courses-table thead {
+    background: #003366;
+    color: white;
+}
+
+.courses-table thead th {
+    font-weight: 600;
+    padding: 15px;
+}
+
+.courses-table tbody td {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+.courses-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Results Widget */
+.results-widget {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 20px;
+}
+
+.results-widget h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #ffc107;
+}
+
+.result-year {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.result-year:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.result-year h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.result-item {
+    margin-bottom: 15px;
+}
+
+.result-item .label {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.result-item .value {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #003366;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #ffc107;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+/* Department Info */
+.dept-info {
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.dept-info h3 {
+    color: #003366;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.dept-info p {
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .results-widget {
+        position: relative;
+        top: 0;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .dept-tabs .nav-link {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .faculty-photo {
+        height: 200px;
+    }
+}

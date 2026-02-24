@@ -1,0 +1,259 @@
+/* ============================================
+   Homepage Categories Section Styles
+   ============================================ */
+
+.homepage-categories-wrapper {
+    padding: 60px 0;
+    background: #f8f9fa;
+}
+
+.category-card {
+    background: white;
+    border-radius: 12px;
+    padding: 30px 25px;
+    height: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    border-top: 4px solid #1e3c72;
+    position: relative;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.category-icon {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e3c72;
+    margin: 0;
+    flex: 1;
+    line-height: 1.3;
+}
+
+.category-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-height: 300px;
+}
+
+.category-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.category-item:last-child {
+    border-bottom: none;
+}
+
+.item-bullet {
+    color: #1e3c72;
+    margin-right: 12px;
+    margin-top: 5px;
+    font-size: 8px;
+    flex-shrink: 0;
+}
+
+.item-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-title {
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 5px;
+    word-wrap: break-word;
+}
+
+.item-link {
+    color: #dc3545;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    transition: color 0.3s;
+    display: inline-block;
+    margin-top: 3px;
+}
+
+.item-link:hover {
+    color: #bb2d3b;
+    text-decoration: underline;
+}
+
+.new-tag {
+    background: #ff0000;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    animation: blink 1s infinite;
+    margin-left: 8px;
+    white-space: nowrap;
+}
+
+@keyframes blink {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0.5;
+    }
+}
+
+.read-more-btn {
+    background: #1e3c72;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 20px;
+    font-weight: 600;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.read-more-btn:hover {
+    background: #2a5298;
+    transform: translateY(-2px);
+    color: white;
+}
+
+
+/* Event Date Badge */
+
+.event-date-badge {
+    background: #1e3c72;
+    color: white;
+    padding: 8px 10px;
+    border-radius: 8px;
+    text-align: center;
+    min-width: 55px;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.event-date-badge .day {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1;
+    display: block;
+}
+
+.event-date-badge .month {
+    font-size: 10px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 2px;
+}
+
+.event-date-badge .year {
+    font-size: 10px;
+    display: block;
+}
+
+
+/* Empty State */
+
+.no-items {
+    text-align: center;
+    padding: 60px 20px;
+    color: #999;
+}
+
+.no-items i {
+    opacity: 0.3;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 991px) {
+    .homepage-categories-wrapper {
+        padding: 40px 0;
+    }
+    .category-title {
+        font-size: 16px;
+    }
+    .category-items {
+        min-height: 250px;
+    }
+}
+
+@media (max-width: 767px) {
+    .homepage-categories-wrapper {
+        padding: 30px 0;
+    }
+    .category-card {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+    .category-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin-right: 12px;
+    }
+    .category-title {
+        font-size: 15px;
+    }
+    .category-items {
+        min-height: auto;
+    }
+    .item-title {
+        font-size: 13px;
+    }
+    .event-date-badge {
+        min-width: 50px;
+        padding: 6px 8px;
+    }
+    .event-date-badge .day {
+        font-size: 20px;
+    }
+    .read-more-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575px) {
+    .homepage-categories-wrapper {
+        padding: 20px 0;
+    }
+    .category-card {
+        padding: 15px;
+    }
+}
